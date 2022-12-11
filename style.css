@@ -1,0 +1,336 @@
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Nunito-Regular.woff2') format('woff2'),
+    url('../fonts/Nunito-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/Nunito-Italic.woff2') format('woff2'),
+    url('../fonts/Nunito-Italic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/YesevaOne-Regular.woff2') format('woff2'),
+    url('../fonts/YesevaOne-Regular.woff') format('woff');
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-harvestgold: #e3b873;
+  --color-bronzegold: #d48609;
+  --color-black: #181818;
+  --color-codgray: #131313;
+  --color-mineshaft: #363636;
+  --color-dustygray: #959595;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  line-height: 1.2;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1208px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.btn {
+  display: block;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-white);
+  font-size: 11px;
+  line-height: 1;
+  background-color: var(--color-harvestgold);
+  text-transform: uppercase;
+  padding: 0;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.title {
+  font-family: 'Yeseva One';
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: 'Yeseva One';
+  font-weight: 400;
+  color: var(--color-harvestgold);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.input {
+  color: var(--color-white);
+  background-color: transparent;
+  height: 23px;
+  border: none;
+  outline: none;
+}
+
+.input::placeholder {
+  font-size: 14px;
+  line-height: 23px;
+  color: var(--color-white);
+}
+
+.address {
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--color-harvestgold);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* -------projects--------- */
+
+.projects-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: var(--color-white);
+  background-color: var(--color-codgray);
+}
+
+.projects-container {
+}
+
+.projects-object__list {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 46px;
+}
+
+.projects-object__item {
+  margin-right: 58px;
+}
+
+.projects-object__btn {
+  font-family: 'Yeseva One';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 39px;
+  color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border: none;
+  transition: color 0.2s linear;
+}
+
+.projects-object__btn:hover,
+.projects-object__btn:focus-visible {
+  color: var(--color-harvestgold);
+}
+
+.projects-object__btn:active {
+  color: var(--color-bronzegold);
+}
+
+.projects-object__btn hr {
+  margin: 0;
+  margin-top: -7px;
+  border-color: transparent;
+  transition: border-color 0.2s linear;
+}
+
+.projects-object__btn.is-active,
+.is-active hr {
+  color: var(--color-harvestgold);
+  border-color: var(--color-harvestgold);
+  pointer-events: none;
+}
+
+.projects-content__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects-content-text {
+  max-width: 442px;
+  margin-right: 50px;
+}
+
+.projects__title {
+  font-size: 27px;
+  line-height: 34px;
+  color: var(--color-harvestgold);
+  letter-spacing: -1.8px;
+  margin-bottom: 29px;
+}
+
+.projects__descr {
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 52px;
+}
+
+.projects-params__list {
+  display: grid;
+  grid-template-columns: 156px 1fr;
+  gap: 34px;
+  margin-bottom: 81px;
+}
+
+.projects-params__item {
+}
+
+.projects-params__subtitle {
+  margin-bottom: 9px;
+}
+
+.projects-params__descr {
+  font-size: 13px;
+  line-height: 21px;
+  transition: opacity 0.2s linear;
+}
+
+.projects-slider-nav {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s linear;
+}
+
+.projects-slider-nav__btn:hover path,
+.projects-slider-nav__btn:focus-visible path {
+  fill: var(--color-harvestgold);
+  transition: fill 0.2s linear;
+}
+
+.projects-slider-nav__btn:active path {
+  fill: var(--color-bronzegold);
+  transition: fill 0.2s linear;
+}
+
+.projects-slider-nav__btn.prev {
+  margin-right: 29px;
+}
+
+.projects-slider-pagination__wrap {
+  display: flex;
+  margin-right: 29px;
+}
+
+.slider-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  transition: background-color 0.2s linear;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider-pagination-bullet:not(:last-child) {
+  margin-right: 17px;
+}
+
+.slider-pagination-bullet.is-active {
+  background-color: var(--color-white);
+}
+
+.slider-pagination-bullet.is-active:hover {
+  background-color: var(--color-white);
+}
+
+.slider-pagination-bullet:hover,
+.slider-pagination-bullet:focus-visible {
+  background-color: var(--color-dustygray);
+}
+.slider-pagination-bullet:active {
+  background-color: var(--color-white);
+}
+.projects-slider-nav__btn.next {
+}
+
+.projects-slider-nav__btn,
+.fantasies-slider-nav__btn-prev,
+.fantasies-slider-nav__btn-next {
+  font-size: 0;
+  background-color: transparent;
+}
+
+.projects-content-slider {
+  max-width: 679px;
+  min-height: 484px;
+}
+
+.projects-content-slider.mobile {
+  display: none;
+}
+
+.projects-content-image {
+  display: none;
+  width: 100%;
+  height: 484px;
+  object-fit: fill;
+  opacity: 0;
+}
+
+.projects-content-image.is-active {
+  display: flex;
+  opacity: 1;
+  animation: fadeIn 0.2s linear;
+}
+
+.projects-content-image.mobile {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}
